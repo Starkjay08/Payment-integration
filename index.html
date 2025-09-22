@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Training Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Register for Training</h1>
+  </header>
+
+  <main>
+    <form id="registrationForm" action="success.html" method="POST" enctype="multipart/form-data">
+      
+      <div class="form-group">
+        <input type="text" name="name" id="name" required placeholder=" ">
+        <label for="name">Full Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" id="email" required placeholder=" ">
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-group">
+        <select name="skill" id="skill" required>
+          <option value="" disabled selected></option>
+          <option value="web">Web Development</option>
+          <option value="data">Data Science</option>
+          <option value="cyber">Cyber Security</option>
+        </select>
+        <label for="skill">Select Skill</label>
+      </div>
+
+      <div class="form-group">
+        <input type="file" name="receipt" id="receipt" accept="image/*" required placeholder=" ">
+        <label for="receipt">Upload Receipt</label>
+      </div>
+
+      <!-- Centered payment buttons -->
+      <div class="payment-options">
+        <button type="button" id="paystackBtn">Pay with Paystack</button>
+        <button type="button" id="googlePayBtn">Pay with Google Pay</button>
+      </div>
+
+      <button type="submit" class="wide-btn">Register</button>
+    </form>
+
+    <div class="payment-banner">
+      <h3>Payment Information</h3>
+      <div class="banner-grid">
+        <div class="banner-item"><strong>Account Number:</strong> 8155020116</div>
+        <div class="banner-item"><strong>Web Dev:</strong> ₦50,000</div>
+
+        <div class="banner-item"><strong>Account Name:</strong> Basit Saliu Alabi</div>
+        <div class="banner-item"><strong>Data Science:</strong> ₦60,000</div>
+
+        <div class="banner-item"><strong>Bank:</strong> Opay Bank</div>
+        <div class="banner-item"><strong>Cyber Security:</strong> ₦70,000</div>
+      </div>
+      <hr class="banner-divider">
+    </div>
+  </main>
+</body>
+</html>

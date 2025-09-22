@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Successful</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Registration Successful</h1>
+  </header>
+
+  <main class="success-container">
+    <p>Thank you for registering. We’ve received your details.</p>
+    <a href="index.html">
+      <button class="wide-btn">Go Back</button>
+    </a>
+  </main>
+
+  <!-- Load confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <!-- Our script -->
+  <script src="confetti.js"></script>
+  <script>
+    startConfetti(); // Trigger confetti when page loads
+  </script>
+</body>
+</html>

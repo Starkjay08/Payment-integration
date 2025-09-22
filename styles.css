@@ -1,0 +1,138 @@
+:root {
+  --primary: #1976D2;
+  --primary-dark: #0D47A1;
+  --surface: #ffffff;
+  --radius: 8px;
+  --spacing: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #F9FAFB;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: var(--spacing);
+  background: var(--primary);
+  color: white;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: var(--spacing);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Floating labels */
+.form-group {
+  position: relative;
+  margin: 20px 0;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: #F1F3F4;
+  font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid var(--primary);
+  background: #E3F2FD;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  font-size: 1em;
+}
+
+/* Floating effect */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:valid + label {
+  top: -6px;
+  left: 8px;
+  font-size: 0.8em;
+  background: var(--surface);
+  padding: 0 4px;
+  color: var(--primary);
+  border-radius: 4px;
+}
+
+/* Payment buttons centered */
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+.wide-btn {
+  width: calc(100% - 32px);
+  margin: 16px;
+}
+
+/* Banner */
+.payment-banner {
+  margin-top: 24px;
+  padding: var(--spacing);
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  background: #E3F2FD;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.banner-item {
+  font-size: 0.95em;
+}
+
+.banner-divider {
+  margin-top: 16px;
+  border: none;
+  border-top: 2px solid #1976D2;
+}
+
+/* Success Page */
+.success-container {
+  text-align: center;
+  padding: 40px 20px;
+}
